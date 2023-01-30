@@ -17,7 +17,7 @@ export default function UserListing() {
       var rows=[];
       
     for(let i=0; i<records.length; i++){
-      rows.push(<User  data={{id:records[i]['id'], name :records[i]['first_name'], email:records[i]['email'], avatar:records[i]['avatar']}}/>)
+      rows.push(<User key={i} data={{id:records[i]['id'], name :records[i]['first_name'], email:records[i]['email'], avatar:records[i]['avatar']}}/>)
       }
       setUsers(rows);
     })
